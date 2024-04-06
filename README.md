@@ -57,7 +57,6 @@ F-1 score（F1 指標）： 2*Precision*Recal /（Precision+Recal） Recall 與 
 
 Accuracy（整體正確率）：（TP+TN）/ Total
 
-![image](https://github.com/wei2772/Applying-Decision-Trees-to-Predict-Credit-Card-Default-Risk/assets/166236173/a5ef9120-4f85-4487-965a-a433ec045218)
 <p align="center">
   <img src="https://github.com/wei2772/Applying-Decision-Trees-to-Predict-Credit-Card-Default-Risk/assets/166236173/a5ef9120-4f85-4487-965a-a433ec045218" width='50%' height='50%'/>
 </p>
@@ -70,7 +69,6 @@ ROC曲線下面積（AUC）：分類器正確判斷陽性樣本的值高於陰�
   0.5 < AUC < 1，優於隨機猜測；
   AUC = 0.5，隨機猜測
   
-![image](https://github.com/wei2772/Applying-Decision-Trees-to-Predict-Credit-Card-Default-Risk/assets/166236173/36ce687d-ab7a-47b7-8a7f-fad553f1e728)
 <p align="center">
   <img src="https://github.com/wei2772/Applying-Decision-Trees-to-Predict-Credit-Card-Default-Risk/assets/166236173/36ce687d-ab7a-47b7-8a7f-fad553f1e728" width='50%' height='50%'/>
 </p>
