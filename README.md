@@ -78,9 +78,9 @@ Accuracy（整體正確率）：（TP+TN）/ Total
   <img src="https://github.com/wei2772/Applying-Decision-Trees-to-Predict-Credit-Card-Default-Risk/assets/166236173/a5ef9120-4f85-4487-965a-a433ec045218" width='50%' height='50%'/>
 </p>
 ROC 曲線（ROC curve）：
-ROC空間將偽陽性率（FPR）定義為 X 軸，真陽性率（TPR） 定義為 Y 軸。
+ROC 空間將偽陽性率（FPR）定義為 X 軸，真陽性率（TPR） 定義為 Y 軸。
 
-ROC曲線下面積（AUC）：分類器正確判斷陽性樣本的值高於陰性樣本之機率。
+ROC 曲線下面積（AUC）：分類器正確判斷陽性樣本的值高於陰性樣本之機率。
 
   AUC = 1，完美分類器；
   0.5 < AUC < 1，優於隨機猜測；
@@ -94,13 +94,13 @@ ROC曲線下面積（AUC）：分類器正確判斷陽性樣本的值高於陰�
 在很多存在數據不平衡問題的任務中，我們往往更關注機器學習模型在少數類上的表現。
 在數據不平衡時，分類器對稀疏樣本的刻畫能力不足，難以有效的對這些稀疏樣本進行分類，使分類器性能下降。
 
-解決數據不平衡問題(1) — SMOTE - ENN
+解決數據不平衡問題(1) — SMOTE + RandomUnderSampler
 
   • SMOTE（Synthetic Minority Over-sampling Technique）：上採樣方法，對少數類樣本進行插值生成新的樣本，增加少數類樣本的數量。
   
-  • ENN（Edited Nearest Neighbours）：下採樣方法，刪除多數類樣本中，與少數類樣本距離較近的樣本，減少多數類樣本的數量。
+  • RUS（RandomUnderSampler）：下採樣方法，隨機刪除多數類樣本，減少多數類樣本的數量。
   
-  • SMOTE 對少數樣本去合成；ENN 欠採樣後可能使樣本過少，有時無法反映全局情況，有過擬合（Overfitting）風險。
+  • SMOTE 對少數樣本去合成；RandomUnderSampler 欠採樣後可能使樣本過少，有時無法反映全局情況，有過擬合（Overfitting）風險。
 
 解決數據不平衡問題(2) — Easy Ensemble
 
@@ -170,7 +170,7 @@ Easy Ensemble (C5.0)
 
 # 結論
 
-本研究採用 Default of Credit Card Clients 資料集，以 CART、C5.0 演算法預測信用卡違約風險，研究中加入篩選變數、SMOTE - ENN 、Easy Ensemble 採樣方法處理數據不平衡，以C5.0 + SMOTE + RUS表現最好，將 Recall（召回率） 從 35% 提升至 64%。 
+本研究採用 Default of Credit Card Clients 資料集，以 CART、C5.0 演算法預測信用卡違約風險，研究中加入篩選變數、SMOTE - RUS 、Easy Ensemble 採樣方法處理數據不平衡，以C5.0 + SMOTE + RUS表現最好，將 Recall（召回率） 從 35% 提升至 64%。 
 
 本研究採用決策樹方法建立模型，未來可以嘗試隨機森林、類神經網路、XGboost，在模型效能與速度可能有更佳的結果。
 
@@ -179,7 +179,7 @@ Easy Ensemble (C5.0)
 
 • https://medium.com/ai反斗城/learning-model-什麼是roc和auc-轉錄-33aafe644cf
 
-• https://medium.com/數學-人工智慧與蟒蛇/smote-enn-解決數據不平衡建模的採樣方法 -cdb6324b711e
+• https://medium.com/數學-人工智慧與蟒蛇/smote-RUS-解決數據不平衡建模的採樣方法 -cdb6324b711e
 
 • Aurélien Géron - Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow_ Concepts, Tools, and Techniques
 
